@@ -1,0 +1,336 @@
+/* Start Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 75%; /* 1rem = 10px */
+}
+
+body {
+    background-color: #081c29;
+    font-family: "Rubik", sans-serif;
+    color: #ededed;
+}
+
+
+/* End Global Styles */
+
+/* Start Main Header Styles */
+
+.logoName {
+    display: inline-flex;
+    gap: 8px;
+
+}
+
+.main-header { 
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+    .main-header {
+        padding: 2.4rem 5.2rem;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    .main-header {
+        padding: 2.4rem 6.4rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .main-header {
+        padding: 2.4rem 8rem;
+    }
+}
+
+.logo {
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ededed;
+}
+
+.toggle-navbar-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+    .toggle-navbar-btn {
+        display: none;
+    }
+}
+
+.toggle-navbar-btn i {
+    font-size: 3rem;
+    color: #ededed;
+}
+
+.navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ededed;
+    padding: 1.6rem 2.4rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.4s;
+}
+
+@media screen and (min-width: 900px) {
+    .navbar {
+        position: static;
+        width: fit-content;
+        background-color: transparent;
+        padding: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+    }
+}
+
+.navbar.show {
+    clip-path: polygon(0 0, 100% 0, 100% 99%, 0 100%);
+}
+
+.navbar a { 
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    padding: 1.6rem 0;
+    color: #081c29;
+    transition: all 0.4s;
+
+}
+
+@media screen and (min-width: 900px) {
+    .navbar a {
+        display: inline-block;
+        padding: 0.8rem 1.6rem;
+        color: #ededed;
+    }
+}
+
+.navbar a.active { 
+    color: #00abf0;
+}
+
+@media screen and (hover: hover) {
+    .navbar a:hover {
+        color: #00abf0;
+    }
+}
+/* End Main Header Styles */
+
+/* Start Hero Styles */
+    .hero {
+        height: 100vh;
+        padding: 2.4rem;
+        /* background: url(../public/images/home.jpg) no-repeat; */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 600px) {
+        .hero {
+            padding: 2.4rem 5.2rem;
+        }
+    }
+
+    @media screen and (min-width: 900px) {
+        .hero {
+            padding: 2.4rem 6.4rem;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        .hero {
+            padding: 2.4rem 8rem;
+        }
+    }
+
+    .hero-content {
+        max-width: 650px;
+    }
+    
+    .hero-content h1{
+        position: relative;
+        line-height: 1.2;
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
+
+    @media screen and (min-width: 600px) {
+        .hero-content h1 {
+            font-size: 3.6rem;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .hero-content h1{
+            font-size: 4.8rem;
+        }
+    }
+
+    .hero-content h3 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #00abf0;
+    }
+
+    @media screen and (min-width: 600px) {
+        .hero-content h3 {
+            font-size: 3rem;
+        }
+    }
+    @media screen and (min-width: 900px) {
+        .hero-content h3 {
+            font-size: 3.2rem;
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        .hero-content h3 {
+            font-size: 3.6rem;
+        }
+    }
+
+    .hero-content p {
+        margin: 2rem 0 3rem;
+        font-size: 1.6rem;
+        line-height: 1.8;
+    }
+
+    .hero-content .btns-box {
+        width: calc(300px + 3rem);
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero-content .btns-box a {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background-color: #00abf0;
+        border: 2px solid #00abf0;
+        border-radius: 7px;
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #081c29;
+        overflow: hidden;
+        transition: all 0.4s;
+    }
+
+    .hero-content .btns-box a:nth-child(2) {
+        background-color: transparent;
+        color: #00abf0;
+
+    }
+
+    .hero-content .btns-box a::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        transition: all 0.4s;
+
+    }
+
+    .hero-content .btns-box a:nth-child(1)::before {
+        background-color: #081c29;
+    }
+
+    .hero-content .btns-box a:nth-child(2)::before {
+        background-color: #00abf0;
+    }
+
+    @media screen and (hover: hover) {
+        .hero-content .btns-box a:hover::before {
+            width: 100%;
+        }   
+        .hero-content .btns-box a:nth-child(1):hover {
+            color: #00abf0;
+        }   
+        .hero-content .btns-box a:nth-child(2):hover {
+            color: #081c29;
+        }   
+    }
+
+    .hero--social-icons {
+        position: absolute;
+        bottom: 4rem;
+        width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero--social-icons a {
+        position: relative;
+        z-index: 1;
+        width: 4rem;
+        height: 4rem;
+        border: 2px solid #00abf0;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #00abf0;
+        overflow: hidden;
+        transition: all 0.4s;
+
+    }
+
+    @media screen and (hover: hover) {
+        .hero--social-icons a:hover {
+            color: #081c29;
+        }
+    }
+
+    .hero--social-icons a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #00abf0;
+        transition: all 0.4s;
+
+    }
+
+    @media screen and (hover: hover) {
+        .hero--social-icons a:hover::before {
+            width: 100%;
+        }
+    }
+
+
+/* End Hero Styles */

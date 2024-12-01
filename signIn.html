@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to the external css file part -->
+    <link href="assets/css/signIn.css" rel="stylesheet" />
+
+    <!-- Get fonts from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Sign In</title>
+    <!-- add icon link -->
+    <link
+      rel="icon"
+      href="assets/public/images/shortcut-script-app.png"
+      type="SNAIcon"
+    />
+    <!-- using boxicons Icon. -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="main-header">
+      <div class="logoName">
+        <img src="assets/public/images/shortcut-script-app.png" style="width: 25px;"/>
+        <a href="landingPage.html" class="logo">SNA iTech.</a>
+      </div>
+      <button class="toggle-navbar-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="navbar">
+        <a href="landingPage.html" class="active">Home</a>
+        <a href="aboutPage.html">About</a>
+        <a href="contactPage.html">Contact</a>
+        <a href="signIn.html">Login</a>
+        <a href="techAccessoriesPage.html">Shop</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <!-- Login Form  -->
+      <div class="form-box signIn">
+        <form action="">
+          <h1>Sign In</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Your Name" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Your Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="forgot-link">
+            <a href="#">Forgot password?</a>
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn">Sign In</button>
+          <p>or sign in with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div class="form-box register">
+        <form action="">
+          <h1>Sign Up</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Your Name" required />
+            <i class="bx bxs-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="text" placeholder="Your Email" required />
+            <i class="bx bxs-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Your Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Confirm Password" required />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+          <button type="submit" class="btn">Sign Up</button>
+          <p>or sign up with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="bx bxl-google"></i></a>
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </form>
+      </div>
+
+      <div class="toggle-box">
+        <!-- toggle-left -->
+        <div class="toggle-panel toggle-left">
+          <h1>Hello, Welcome!</h1>
+          <p>Don't have an account?</p>
+          <button class="btn signUp-btn">Sign Up</button>
+        </div>
+        <!--toggle-right -->
+        <div class="toggle-panel toggle-right">
+          <h1>Welcome Back!</h1>
+          <p>Already have an account?</p>
+          <button class="btn signIn-btn">Sign In</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets\js\signIn.js"></script>
+  </body>
+</html>
